@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+
+<head>
+    <!-- meta tag -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Réservation fictive de vélos sur la ville de Lyon. Google Map. API JC Decaux."/>
+    <meta name="keywords" content="Vélos, Vélo'V, Lyon, Réservation."/>
+    <!-- fontawesome & style css -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/lyonVelo.css" rel="stylesheet" />
+
+    <title>Réserva'LyonVélo</title>
+</head>
+
+<body>
+    <header>
+        <h1>Réserva'Lyon</h1>
+    </header>
+
+    <section id="slideshow">
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Image remplissant 100% de la div conteneur -->
+            <div class="mySlides fade">
+                <img src="images/C1.jpeg" style="width:100%" alt="diapo1">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/C2.jpeg" style="width:100%" alt="diapo2">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/C3.jpeg" style="width:100%" alt="diapo3">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/C4.jpeg" style="width:100%" alt="diapo4">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/C5.jpeg" style="width:100%" alt="diapo5">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/C6.jpeg" style="width:100%" alt="diapo6">
+            </div>
+
+            <!-- Boutons de navigation gauche droite -->
+            <a class="prev" id="left"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+            <a class="next" id="right"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
+        <br>
+    </section>
+
+    <section id="legend">
+
+        <button id="showLegend">Appuyer pour voir la légende</button>
+
+        <div id="lgdBlock">
+            <div class="legend">
+                <img src="images/velomini-closed.png" alt="legend-closed">
+                <span>Station fermée</span>
+            </div>
+            <div class="legend">
+                <img src="images/velomini-empty.png" alt="legend-empty">
+                <span>Station vide</span>
+            </div>
+            <div class="legend">
+                <img src="images/velomini-rouge.png" alt="legend-more-used">
+                <span>Station très utilisée</span>
+            </div>
+            <div class="legend">
+                <img src="images/velomini-orange.png" alt="legend-used">
+                <span>Station utilisée</span>
+            </div>
+            <div class="legend">
+                <img src="images/velomini-vert.png" alt="legend-good">
+                <span>Station très remplie</span>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="resa">
+
+        <article id="map">
+        </article>
+
+        <aside id="infoBox">
+
+        </aside>
+        
+        <canvas id="canvas" width="320px" height="300px">
+            <p>Désolé, votre navigateur ne supporte pas Canvas. Mettez-vous à jour</p>
+        </canvas>
+        
+       
+    </section>
+
+    <footer id="footer">
+
+        <div id="blockResa">
+
+            <div id="timeResa">
+                <h2><i class="fa fa-bicycle" aria-hidden="true"></i> Etat de votre réservation <i class="fa fa-bicycle" aria-hidden="true"></i>
+                </h2>
+                <p>Vous avez réservé 1 vélo à la station n°<span id="station"></span></p>
+                <p id="timing">Votre réservation prendra fin dans <span id="minutes"></span></p>
+            </div>
+
+            <div id="imageSign">
+            </div>
+
+        </div>
+
+    </footer>
+    
+    <script src="js/markerclusterer.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/lyonVeloPOO.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlWQGINt2sVhRDIbJ5YTu7E1BV1eQfQRk&callback=initMap" async defer></script>
+
+</body>
+
+</html>
