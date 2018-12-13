@@ -106,9 +106,9 @@ var legendBtn = document.getElementById("showLegend");
 var legend = document.getElementById("lgdBlock");
 
 
-var animDom = { //L'objet qui gère toutes les modifications, affichages, masquages des éléments du site
+var animDom = {
 
-    showEtat: function () { //Ici l'affichage de l'infoBox
+    showEtat: function () {
         
         // On commence par vider les anciennes données
         infoBox.innerHTML = "";
