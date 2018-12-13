@@ -442,10 +442,10 @@ var alert = {
 // ------------------------------------------------------- //
 // ------------------- STATION DATA ---------------------- //
 // ------------------------------------------------------- //
-//Ici on manipule les données des stations, on enregistre la
+// Ici on manipule les données des stations, on enregistre la
 // date de réservation et on vide les données
 
-var etatStat = { //Ici on extrait les éléments du marquer cliqué receuillis dans l'API//
+var etatStat = {
 
     init: function (status, name, address, available_bike_stands, available_bikes, used, icon, indice) {
 
@@ -533,11 +533,13 @@ var timer = {
 //Carrousel simple issu du W3C school.
 
 $(document).ready(function () {
+
     var slideIndex = 1;
     var $slides = $(".mySlides");
     var $left = $("#left");
     var $right = $("#right");
     var $slideshow = $("#slideshow");
+
     var animCar = {
         plusSlides: function (n) {
             animCar.showSlides(slideIndex += n);
@@ -556,18 +558,17 @@ $(document).ready(function () {
             $slides.eq(slideIndex - 1).show();
         }
     };
+
     animCar.showSlides(slideIndex);
-    //Ici le chevron gauche
+
     $left.click(function () {
         animCar.plusSlides(-1);
     });
-    //Ici le chevron droit
+
     $right.click(function () {
         animCar.plusSlides(1);
     });
 
-    //Ici on écoute les événements sur les flèches
-    // gauches et droites du clavier
     $('body').keydown(function (e) {
         var appui = e.keyCode || e.wich;
         if (appui == 37) {
